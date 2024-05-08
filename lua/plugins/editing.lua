@@ -16,9 +16,6 @@ return{
         lazy = false,
     },
     {
-        "Pocco81/auto-save.nvim",
-    },
-    {
         'mbbill/undotree',
     },
     {
@@ -71,13 +68,4 @@ return{
             hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
         end,
     },
-    {
-        "folke/trouble.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        },
-    }
 }

@@ -26,28 +26,25 @@ map('n', '<leader>x', "<cmd>!chmod +x %<CR>", noremap, { desc = "Paste from outs
 map('n', '<leader>c', vim.cmd.noh, noremap, { desc = "Paste from outside nvim"})
 map('n', '<leader>v', '"+p', noremap, { desc = "Paste from outside nvim"})
 
-
 -- telescope keybinds
 local builtin = require('telescope.builtin')
 map('n', '<C-p>', builtin.find_files, {})
 map('n', '<C-g>', builtin.live_grep, {})
 map('n', '<C-b>', builtin.buffers, {})
 map('n', '<leader>fh', builtin.help_tags, {})
+map('n', '<leader>fk', builtin.keymaps, {})
 
 -- Autosave keybinds
 map("n", "<leader>s", ":ASToggle<CR>", {})
 
--- Neotree keybinds
-map("n", "<leader><TAB>", ":Neotree filesystem toggle left <CR>", {})
+-- lazydocker
+vim.keymap.set("n", "<leader>lzd", "<cmd>LazyDocker<CR>", { desc = "Toggle LazyDocker", noremap = true, silent = true })
 
 -- oil keybinds
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Undotree keybinds
 map('n', '<leader>u', vim.cmd.UndotreeToggle, noremap, { desc = "Paste from outside nvim"})
-
--- Nabla keybinds
-map('n', '<leader>ma', [[:lua require("nabla").popup()<CR>]], noremap, { desc = "Paste from outside nvim"})
 
 -- Sniprun keybinds
 map('n', '<leader>r', '<Plug>SnipRunOperator', noremap, { desc = "Paste from outside nvim"})
@@ -73,19 +70,6 @@ map("n", "<Leader>dt", ":DapToggleBreakpoint<CR>")
 map("n", "<Leader>dc", ":DapContinue<CR>")
 map("n", "<Leader>dx", ":DapTerminate<CR>")
 map("n", "<Leader>do", ":DapStepOver<CR>")
-
-
--- harpoon keybinds
--- local harpoon = require("harpoon")
--- harpoon:setup()
--- map("n", "<leader>a", function() harpoon:list():append() end)
--- map("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
--- map("n", "<C-h>", function() harpoon:list():select(1) end)
--- map("n", "<C-t>", function() harpoon:list():select(2) end)
--- map("n", "<C-n>", function() harpoon:list():select(3) end)
--- map("n", "<C-s>", function() harpoon:list():select(4) end)
--- map("n", "<C-S-P>", function() harpoon:list():prev() end)
--- map("n", "<C-S-N>", function() harpoon:list():next() end)
 
 -- vim-tmux-navigator
 if os.getenv("TMUX") then

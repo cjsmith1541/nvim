@@ -26,7 +26,7 @@ return {
             nvim_cmp = true,
             min_chars = 2,
         },
-        new_notes_location = "~/Obsidian/Main/0-inbox",
+        new_notes_location = "notes_   s",
         wiki_link_func = function(opts)
             if opts.id == nil then
                 return string.format("[[%s]]", opts.label)
@@ -39,7 +39,7 @@ return {
 
         daily_notes = {
             -- Optional, if you keep daily notes in a separate directory.
-            folder = "notes/dailies",
+            folder = "dailies",
             -- Optional, if you want to change the date format for the ID of daily notes.
             date_format = "%Y-%m-%d",
             -- Optional, if you want to change the date format of the default alias of daily notes.
