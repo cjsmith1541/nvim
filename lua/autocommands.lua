@@ -6,11 +6,6 @@ vim.cmd([[
 :  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 :augroup END
 
-:augroup _jam
-:autocmd!
-:autocmd BufRead,BufEnter *.jam set filetype=jam
-:augroup end
-
 if exists('$TMUX')
 autocmd BufEnter,FocusGained * call system("tmux rename-window " . expand("%:t"))
 autocmd VimLeave * call system("tmux set automatic-rename on")
@@ -39,6 +34,7 @@ vim.api.nvim_create_autocmd("FileType", {
         "checkhealth",
         "neotest-summary",
         "neotest-output-panel",
+        "oil",
     },
     callback = function(event)
         vim.bo[event.buf].buflisted = false
