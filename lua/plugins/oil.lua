@@ -54,8 +54,8 @@ return {
         -- Set to `false` to remove a keymap
         -- See :help oil-actions for a list of all available actions
         keymaps = {
-            ["K"] = "actions.preview_scroll_up",
-            ["J"] = "actions.preview_scroll_down",
+            ["<C-k>"] = "actions.preview_scroll_up",
+            ["<C-j>"] = "actions.preview_scroll_down",
             ["<leader>p"] = "actions.preview",
             ["<C-p>"] = false,
             ["g?"] = "actions.show_help",

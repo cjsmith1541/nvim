@@ -15,7 +15,7 @@ return {
 
         -- see below for full list of optional dependencies 👇
     },
-    config = {
+    opts = {
         workspaces = {
             {
                 name = "Notes",
