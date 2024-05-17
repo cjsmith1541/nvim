@@ -1,5 +1,8 @@
 return{
     {
+        "sitiom/nvim-numbertoggle" 
+    },
+    {
         'christoomey/vim-tmux-navigator', event = "BufReadPre"
     },
     {

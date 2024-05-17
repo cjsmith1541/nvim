@@ -1,6 +1,8 @@
 vim.g.plugin_exec = 1
 vim.opt.signcolumn = 'yes'
 vim.opt.tabstop = 4
+vim.opt.number = true
+vim.opt.history = 200
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
@@ -17,7 +19,7 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 vim.opt.hlsearch = true
 vim.opt.conceallevel = 2
-vim.opt.tw = 100
+vim.opt.tw = 101
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua"
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua"
 -- local hl = vim.api.nvim_set_hl

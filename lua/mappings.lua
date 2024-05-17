@@ -1,18 +1,4 @@
-local map = vim.keymap.set
-local noremap = { noremap = true, silent = true }
-
--- quick focus keybinds
-local focusmap = function(direction)
-    vim.keymap.set('n', '<Leader>' .. direction, function()
-        require('focus').split_command(direction)
-    end, { desc = string.format('Create or move to split (%s)', direction) })
-end
-focusmap('h')
-focusmap('j')
-focusmap('k')
-focusmap('l')
-
--- General keybinds
+local map = vim.keymap.set local noremap = { noremap = true, silent = true } -- General keybinds
 map('v', 'J', ":m '>+1<CR>gv=gv", noremap, { desc = "Move highlighted text down"})
 map('v', 'K', ":m '<-2<CR>gv=gv", noremap, { desc = "Move highlighted text up"})
 map('n', 'J', 'mzJ`z', noremap, { desc = "Paste from outside nvim"})
@@ -53,11 +39,6 @@ map('n', '<leader>rb', '<Plug>SnipRun', noremap, { desc = "Paste from outside nv
 map('n', '<leader>rc', '<Plug>SnipClose', noremap, { desc = "Paste from outside nvim"})
 map('n', '<leader>rq', '<Plug>SnipReset', noremap, { desc = "Paste from outside nvim"})
 map('v', 'r', '<Plug>SnipRun',  noremap, { desc = "Paste from outside nvim"})
-
--- Focus keybinds
-map('n', '<leader>z', [[:FocusMaxOrEqual <CR>]], noremap, { desc = "Paste from outside nvim"})
-map('n', '<leader>;', [[:FocusSplitCycle <CR>]], noremap, { desc = "Paste from outside nvim"})
-map('n', '<leader>S', [[:FocusSplitNicely <CR>]], noremap, { desc = "Paste from outside nvim"})
 
 -- LSP keybinds
 map("n", "K", vim.lsp.buf.hover, {})

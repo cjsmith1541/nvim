@@ -63,7 +63,7 @@ return {
             ["<C-s>"] = "actions.select_vsplit",
             ["<C-h>"] = "actions.select_split",
             ["<C-t>"] = "actions.select_tab",
-            ["<C-c>"] = "actions.close",
+            ["q"] = "actions.close",
             ["<C-l>"] = "actions.refresh",
             ["-"] = "actions.parent",
             ["_"] = "actions.open_cwd",

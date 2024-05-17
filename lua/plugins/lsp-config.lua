@@ -7,9 +7,6 @@ return {
         end,
     },
     {
-        "folke/neodev.nvim"
-    },
-    {
         "williamboman/mason-lspconfig.nvim",
         lazy = false,
         opts = {
