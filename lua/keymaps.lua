@@ -1,8 +1,8 @@
 local map = vim.keymap.set
 
 map("n", "J", "mzJ`z", { desc = "Keep vison on end of J command" })
-map("n", "<C-d>", "<C-d>zz", { desc = "Centers text when jumping with Ctrl-d" })
-map("n", "<C-u>", "<C-u>zz", { desc = "Centers text when jumping with Ctrl-u" })
+-- map("n", "<C-d>", "<C-d>zz", { desc = "Centers text when jumping with Ctrl-d" })
+-- map("n", "<C-u>", "<C-u>zz", { desc = "Centers text when jumping with Ctrl-u" })
 map("n", "n", "nzzzv", { desc = "Centers text when using n to jump" })
 map("n", "N", "Nzzzv", { desc = "Centers text when using N to jump" })
 map("n", "<leader>mx", "<cmd>!chmod +x %<CR>", { desc = "Make file executable" })

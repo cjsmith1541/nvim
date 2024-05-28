@@ -1,4 +1,4 @@
-opts = {
+require("obsidian").setup({
 	workspaces = {
 		{
 			name = "Notes",
@@ -9,7 +9,7 @@ opts = {
 		nvim_cmp = true,
 		min_chars = 2,
 	},
-	new_notes_location = "notes_   s",
+	new_notes_location = "notes",
 	wiki_link_func = function(opts)
 		if opts.id == nil then
 			return string.format("[[%s]]", opts.label)
@@ -91,4 +91,4 @@ opts = {
 		time_format = "%H:%M",
 		tags = "",
 	},
-}
+})
