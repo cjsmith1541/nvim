@@ -12,7 +12,7 @@ require("oil").setup({
 		["<C-t>"] = "actions.select_tab",
 		["<C-p>"] = "actions.preview",
 		["<C-c>"] = "actions.close",
-		["q"] = "actions.close",
+		["<esc><esc>"] = "actions.close",
 		["<leader>l"] = "actions.refresh",
 		["<M-p>"] = "actions.preview_scroll_up",
 		["<M-n>"] = "actions.preview_scroll_down",

@@ -4,7 +4,7 @@ return {
 		config = function()
 			require("mini.ai").setup()
 			require("mini.surround").setup()
-			require("mini.animate").setup()
+			-- require("mini.animate").setup()
 		end,
 	},
 }

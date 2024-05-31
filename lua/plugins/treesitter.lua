@@ -3,7 +3,7 @@ require("nvim-treesitter.configs").setup({
 	ensure_installed = { "markdown", "rust", "cpp", "c", "lua", "python", "css", "html", "bash" },
 	sync_install = true,
 	auto_install = true,
-	ignore_install = {},
+	ignore_install = { "latex" },
 	highlight = {
 		enable = true,
 		indent = { enable = true },

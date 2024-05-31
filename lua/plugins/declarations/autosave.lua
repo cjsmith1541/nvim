@@ -1,6 +1,7 @@
 return {
 	"okuuva/auto-save.nvim",
-	ft = { "markdown", "latex" },
+	lazy = true,
+	ft = { "markdown", "tex" },
 	config = function()
 		require("plugins.autosave")
 	end,
