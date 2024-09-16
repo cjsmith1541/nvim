@@ -3,7 +3,7 @@ local function augroup(name)
 	return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
 end
 
--- Cange filename in tmux tab
+-- Change filename in Tmux tab
 if vim.fn.exists("$TMUX") == 1 then
 	vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained" }, {
 		pattern = "*",

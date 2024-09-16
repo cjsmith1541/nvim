@@ -15,8 +15,8 @@ return {
 			-- Schema information
 			"b0o/SchemaStore.nvim",
 		},
-        config = function()
-            require("plugins.lsp")
-        end,
+		config = function()
+			require("plugins.lsp")
+		end,
 	},
 }
